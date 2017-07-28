@@ -19,7 +19,7 @@ class GenerateSharedModuleCommand {
 				return;
 			}
 
-			this.$errors.failWithoutHelp(`You should pass at least one argument to 'module' command.`);
+			this.$errors.failWithoutHelp(`You should pass at least one argument to 'generate shared-module' command.`);
 		});
 	}
 
@@ -36,3 +36,6 @@ class GenerateSharedModuleCommand {
 
 $injector.registerCommand('generate|shared-module', GenerateSharedModuleCommand);
 $injector.registerCommand('g|shared-module', GenerateSharedModuleCommand);
+
+$injector.registerCommand('generate|sm', GenerateSharedModuleCommand);
+$injector.registerCommand('g|sm', GenerateSharedModuleCommand);

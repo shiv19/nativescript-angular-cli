@@ -24,7 +24,7 @@ class GenerateModuleCommand {
 				return;
 			}
 
-			this.$errors.failWithoutHelp(`You should pass at least one argument to 'module' command.`);
+			this.$errors.failWithoutHelp(`You should pass at least one argument to 'generate module' command.`);
 		});
 	}
 
@@ -47,3 +47,6 @@ class GenerateModuleCommand {
 
 $injector.registerCommand('generate|module', GenerateModuleCommand);
 $injector.registerCommand('g|module', GenerateModuleCommand);
+
+$injector.registerCommand('generate|m', GenerateModuleCommand);
+$injector.registerCommand('g|m', GenerateModuleCommand);
