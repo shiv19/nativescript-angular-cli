@@ -11,19 +11,25 @@ $injector.require('generatorService', path.join(__dirname, 'generator.service'))
 // All commands are registered with `registerCommand` method in the file where's their source code. In the bootstrap the must be required with `requireCommand`.
 // $injector.requireCommand('generate|*default', path.join(__dirname, 'module-command'));
 // $injector.requireCommand('g|*default', path.join(__dirname, 'module-command'));
-$injector.requireCommand('generate|module', path.join(__dirname, 'generate-module.command'));
-$injector.requireCommand('g|module', path.join(__dirname, 'generate-module.command'));
-$injector.requireCommand('generate|m', path.join(__dirname, 'generate-module.command'));
-$injector.requireCommand('g|m', path.join(__dirname, 'generate-module.command'));
+$injector.requireCommand([
+	'generate|module',
+	'g|module',
+	'generate|m',
+	'g|m'
+], path.join(__dirname, 'generate-module.command'));
 
-$injector.requireCommand('generate|shared-module', path.join(__dirname, 'generate-shared-module.command'));
-$injector.requireCommand('g|shared-module', path.join(__dirname, 'generate-shared-module.command'));
-$injector.requireCommand('generate|sm', path.join(__dirname, 'generate-shared-module.command'));
-$injector.requireCommand('g|sm', path.join(__dirname, 'generate-shared-module.command'));
+$injector.requireCommand([
+	'generate|shared-module',
+	'g|shared-module',
+	'generate|sm',
+	'g|sm'
+], path.join(__dirname, 'generate-shared-module.command'));
 
-$injector.requireCommand('generate|component', path.join(__dirname, 'generate-component.command'));
-$injector.requireCommand('g|component', path.join(__dirname, 'generate-component.command'));
-$injector.requireCommand('generate|c', path.join(__dirname, 'generate-component.command'));
-$injector.requireCommand('g|c', path.join(__dirname, 'generate-component.command'));
+$injector.requireCommand([
+	'generate|component',
+	'g|component',
+	'generate|c',
+	'g|c'
+], path.join(__dirname, 'generate-component.command'));
 
 $injector.require('blueprintManager', path.join(__dirname, 'blueprint-manager'));

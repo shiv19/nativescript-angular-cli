@@ -45,8 +45,9 @@ class GenerateComponentCommand {
 // $injector.registerCommand('generate|*default', ModuleCommand);
 // $injector.registerCommand('g|*default', ModuleCommand);
 
-$injector.registerCommand('generate|component', GenerateComponentCommand);
-$injector.registerCommand('g|component', GenerateComponentCommand);
-
-$injector.registerCommand('generate|c', GenerateComponentCommand);
-$injector.registerCommand('g|c', GenerateComponentCommand);
+$injector.registerCommand([
+	'generate|component',
+	'g|component',
+	'generate|c',
+	'g|c'
+], GenerateComponentCommand);

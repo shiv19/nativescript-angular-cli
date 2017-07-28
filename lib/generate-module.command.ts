@@ -45,8 +45,9 @@ class GenerateModuleCommand {
 // $injector.registerCommand('generate|*default', ModuleCommand);
 // $injector.registerCommand('g|*default', ModuleCommand);
 
-$injector.registerCommand('generate|module', GenerateModuleCommand);
-$injector.registerCommand('g|module', GenerateModuleCommand);
-
-$injector.registerCommand('generate|m', GenerateModuleCommand);
-$injector.registerCommand('g|m', GenerateModuleCommand);
+$injector.registerCommand([
+	'generate|module',
+	'g|module',
+	'generate|m',
+	'g|m'
+], GenerateModuleCommand);

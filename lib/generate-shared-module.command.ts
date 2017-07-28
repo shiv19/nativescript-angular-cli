@@ -34,8 +34,8 @@ class GenerateSharedModuleCommand {
 	}
 }
 
-$injector.registerCommand('generate|shared-module', GenerateSharedModuleCommand);
-$injector.registerCommand('g|shared-module', GenerateSharedModuleCommand);
-
-$injector.registerCommand('generate|sm', GenerateSharedModuleCommand);
-$injector.registerCommand('g|sm', GenerateSharedModuleCommand);
+$injector.registerCommand(['generate|shared-module',
+	'g|shared-module',
+	'generate|sm',
+	'g|sm'
+], GenerateSharedModuleCommand);
