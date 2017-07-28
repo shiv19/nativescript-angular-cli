@@ -17,8 +17,16 @@ export class GeneratorService {
 
 		}
 
+		public generateComponent(name: string, destinationRoot: string = 'src/app'): string {
+			return this.generate(name, 'component', destinationRoot);
+		}
+
 		public generateModule(name: string, destinationRoot: string = 'src/app'): string {
 			return this.generate(name, 'module', destinationRoot);
+		}
+
+		public generateSharedComponent(name: string, destinationRoot: string = 'src'): string {
+			return this.generate(name, 'shared-component', destinationRoot);
 		}
 
 		public generateSharedModule(name: string, destinationRoot: string = 'src'): string {

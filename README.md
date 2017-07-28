@@ -11,6 +11,17 @@ The package will be installed to:
 > NOTE: You need NativeScript CLI 3.0.0 or later. You can install latest version by executing `npm i -g nativescript`.
 
 ## Usage
-After installing the extension just call:
-`tns create module <your name>`
-`tns create shared-module <your name>`
+To generate a component, run:
+`tns generate component <component-name>`
+`tns g c <component-name>`
+
+To create a module, run:
+`tns generate module <module-name>`
+`tns g m <module-name>`
+
+
+## TeamMaestro Shareable Components/Modules generators
+
+To generate a shareable module run:
+`tns generate shared-module <module-name>`
+`tns g sm <module-name>`
