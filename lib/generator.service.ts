@@ -29,7 +29,7 @@ export class GeneratorService {
 
 			this.generateFiles(items, relativePath, classifiedName, dasherizedName);
 
-			return `${classifiedName}Module has been created.`;
+			return `${classifiedName} ${blueprintType} has been created.`;
 		}
 
 		private generateFiles(templates: TemplateMetadata[], relativePath: string, classifiedName: string, dasherizedName: string) {
