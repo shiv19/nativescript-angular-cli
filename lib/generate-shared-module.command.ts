@@ -1,36 +1,44 @@
 import { GeneratorService } from "./generator.service";
+import { ValidationService } from "./validation.service";
+
+import { DefaultSrcPath } from './constants';
 
 class GenerateSharedModuleCommand {
 	constructor(private $errors: IErrors,
 		private $logger: ILogger,
-		// private $projectDataService: IProjectDataService,
-		private $generatorService: GeneratorService) {
+		private $generatorService: GeneratorService,
+		private $validationService: ValidationService) {
 	}
 
 	canExecute(args: string[]) {
 		return new Promise((resolve, reject) => {
-			console.log('Can Execute');
+			if (this.$validationService.isAngularNativeSeed() === false) {
+				this.$errors.failWithoutHelp('This command should be run from the root of angular-native-seed');
+			}
+
 			if (args.length > 1) {
 				this.$errors.failWithoutHelp('This command requires one argument.');
 			}
 
-			if (args.length) {
-				resolve(true);
-				return;
+			if (this.$validationService.checkIfModuleExists(DefaultSrcPath.SHARED, args[0])) {
+				this.$errors.failWithoutHelp(`${args[0]} module already exists`);
 			}
 
-			this.$errors.failWithoutHelp(`You should pass at least one argument to 'generate shared-module' command.`);
+			resolve(true);
 		});
 	}
 
 	execute(args: string[]) {
 		return new Promise((resolve, reject) => {
-			// printMarkdown method allows support for Markdown syntax in the terminal.
-			const message = this.$generatorService.generateSharedModule(args[0]);
+			const message = this.generateSharedModule(args[0]);
 			this.$logger.printMarkdown(message);
 
 			resolve();
 		});
+	}
+
+	public generateSharedModule(name: string): string {
+		return this.$generatorService.generate(name, 'shared-module', DefaultSrcPath.SHARED);
 	}
 }
 

@@ -9,12 +9,12 @@ export class BlueprintManager {
 	constructor(private $fs: IFileSystem) {
 	}
 
-	listTemplates(blueprintType: string): TemplateMetadata[] {
+	public listTemplates(blueprintType: string): TemplateMetadata[] {
 		const directory = this.getSourcePath(blueprintType);
 		return this.findAllTemplates(directory, '');
 	}
 
-	findAllTemplates(fullPath: string, relativePath: string): TemplateMetadata[] {
+	private findAllTemplates(fullPath: string, relativePath: string): TemplateMetadata[] {
 		const items: TemplateMetadata[] = [];
 
 		const directoryContents = this.$fs.readDirectory(fullPath);
@@ -37,19 +37,19 @@ export class BlueprintManager {
 		return items;
 	}
 
-	isDirectory(url: string) {
+	private isDirectory(url: string) {
 		const stat = this.$fs.getFsStats(url);
 
 		return stat.isDirectory();
 	}
 
-	getSourcePath(blueprintType: string): string {
+	private getSourcePath(blueprintType: string): string {
 		const blueprintsDir = this.getPathToBlueprints();
 
 		return path.join(blueprintsDir, blueprintType, 'files');
 	}
 
-	getPathToBlueprints(): string {
+	private getPathToBlueprints(): string {
 		return path.join(__dirname, '..', 'blueprints');
 	}
 
