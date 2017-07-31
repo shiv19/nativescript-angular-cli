@@ -1,4 +1,4 @@
 export class DefaultSrcPath {
-	static NATIVESCRIPT = 'src';
+	static NATIVESCRIPT = 'app';
 	static SHARED = 'src/app';
 }
