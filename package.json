@@ -1,16 +1,16 @@
 {
   "name": "nativescript-angular-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "NativeScript CLI command extensions to add some of the Angular CLI commands",
   "main": "lib/bootstrap.js",
   "scripts": {
-    "test": "node_modules/.bin/istanbul cover node_modules/mocha/bin/_mocha -- --recursive --reporter spec-xunit-file --require test/test-bootstrap.js --timeout 1000 test/"
+    "test": "istanbul cover node_modules/mocha/bin/_mocha -- --recursive --reporter spec-xunit-file --require test/test-bootstrap.js --timeout 1000 test/"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sebawita/nativescript-angular-cli.git"
   },
-  "author": "Progress <support@telerik.com>",
+  "author": "Sebastian Witalec",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/sebawita/nativescript-angular-cli/issues"
@@ -58,5 +58,13 @@
     "simple-plist": "0.2.1",
     "uuid": "3.0.1",
     "xml-escape": "1.1.0"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [
+    "NativeScript",
+    "Angular",
+    "CLI"
+  ]
 }
