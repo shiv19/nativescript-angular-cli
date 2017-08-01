@@ -12,13 +12,15 @@ class GenerateListCommand {
 	execute(args: string[]) {
 		return new Promise((resolve, reject) => {
 			let message = `List of all available commands:
-\`tns g m name\` or tns generate module name
-\`tns g c name\` => tns generate component name
-\`tns g s name\` => tns generate service name
+\`tns g m <name>\` => tns generate module <name>
+\`tns g c <name>\` => tns generate component <name>
+\`tns g c <name> <module-name>\` => tns generate component <name> <module-name>
+\`tns g s <name>\` => tns generate service <name>
 
 For shared projects with \`native-angular-seed\`:
-\`tns g sm name\` => tns generate shared-module name
-\`tns g sc name\` => tns generate shared-component name`;
+\`tns g sm <name>\` => tns generate shared-module <name>
+\`tns g sc <name>\` => tns generate shared-component <name>
+\`tns g sc <name> <module-name>\` => tns generate shared-component <name> <module-name>`;
 
 			this.$logger.printMarkdown(message);
 
