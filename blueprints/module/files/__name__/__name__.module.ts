@@ -5,7 +5,7 @@ import { NativeScriptFormsModule } from 'nativescript-angular/forms';
 import { NativeScriptRouterModule } from 'nativescript-angular';
 
 import { <%= classifiedModuleName %>Routes } from './<%= dasherizedModuleName %>.routes';
-import { <%= classifiedModuleName %>Component } from './components/<%= dasherizedModuleName %>/<%= dasherizedModuleName %>.component'
+import { <%= classifiedModuleName %>Component } from './components/<%= dasherizedModuleName %>/<%= dasherizedModuleName %>.component';
 
 @NgModule({
 	imports: [
