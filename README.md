@@ -12,19 +12,23 @@ The package will be installed to:
 
 ## Usage
 To generate a component, run:
-`tns generate component <component-name>`
-`tns g c <component-name>`
+* `tns generate component <component-name>`
+* `tns g c <component-name>`
+
+To create a component inside a module, run:
+* `tns generate component <component-name> <module-name>`
+* `tns g c <component-name> <module-name>`
 
 To create a module, run:
-`tns generate module <module-name>`
-`tns g m <module-name>`
+* `tns generate module <module-name>`
+* `tns g m <module-name>`
 
 To create a service, run:
-`tns generate service <service-name>`
-`tns g s <service-name>`
+* `tns generate service <service-name>`
+* `tns g s <service-name>`
 
 ## TeamMaestro Shareable Components/Modules generators
 
 To generate a shareable module run:
-`tns generate shared-module <module-name>`
-`tns g sm <module-name>`
+* `tns generate shared-module <module-name>`
+* `tns g sm <module-name>`
