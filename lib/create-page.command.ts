@@ -3,7 +3,7 @@ import { ValidationService } from "./validation.service";
 
 import { DefaultSrcPath } from "./constants";
 
-class GeneratePageCommand {
+class CreatePageCommand {
     constructor(
         private $errors: IErrors,
         private $logger: ILogger,
@@ -60,6 +60,6 @@ class GeneratePageCommand {
 }
 
 $injector.registerCommand(
-    ["generate|page", "g|page", "generate|p", "g|p"],
-    GeneratePageCommand
+    ["create|page", "c|page", "create|p", "c|p"],
+    CreatePageCommand
 );
