@@ -1,1 +1,1 @@
-Coming soon
+tns generate page <pagename>
