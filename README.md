@@ -1,4 +1,6 @@
-# nativescript-javascript-cli [![NPM](https://nodei.co/npm/nativescript-javascript-cli.png)](https://nodei.co/npm/nativescript-javascript-cli/)
+# nativescript-javascript-cli
+
+[![NPM](https://nodei.co/npm/nativescript-javascript-cli.png)](https://nodei.co/npm/nativescript-javascript-cli/)
 
 [![Twitter URL](https://img.shields.io/badge/twitter-%40MultiShiv19-blue.svg)](https://twitter.com/MultiShiv19)
 
@@ -28,8 +30,8 @@ To generate page run:
 
 * `tns m p <pagename> [foldername]`
 
-```
 Made with love for {N} Community
 
-Big thanks to Sebastian Witalec [![Twitter URL](https://img.shields.io/badge/twitter-%40Sebawita-blue.svg)](https://twitter.com/sebawita) for making the nativescript-angular-cli
-```
+Big thanks to Sebastian Witalec
+[![Twitter URL](https://img.shields.io/badge/twitter-%40Sebawita-blue.svg)](https://twitter.com/sebawita)
+for making the nativescript-angular-cli
