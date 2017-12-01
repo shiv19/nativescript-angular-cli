@@ -1,20 +1,20 @@
-import { GeneratorService } from "./generator.service";
-import { ValidationService } from "./validation.service";
+import { GeneratorServiceJS } from "./generator-js.service";
+import { ValidationServiceJS } from "./validation-js.service";
 
 import { DefaultSrcPath } from "./constants";
 
-class CreatePageCommand {
+class MakePageCommand {
     constructor(
         private $errors: IErrors,
         private $logger: ILogger,
-        private $generatorService: GeneratorService,
-        private $validationService: ValidationService
+        private $generatorServiceJS: GeneratorServiceJS,
+        private $validationServiceJS: ValidationServiceJS
     ) {}
 
     canExecute(args: string[]) {
         return new Promise((resolve, reject) => {
             if (
-                this.$validationService.isJavascriptNativeScriptProject() ===
+                this.$validationServiceJS.isJavascriptNativeScriptProject() ===
                 false
             ) {
                 this.$errors.failWithoutHelp(
@@ -29,7 +29,7 @@ class CreatePageCommand {
             }
 
             if (
-                this.$validationService.checkIfPageExists(
+                this.$validationServiceJS.checkIfPageExists(
                     DefaultSrcPath.NATIVESCRIPT,
                     args[0]
                 )
@@ -51,7 +51,7 @@ class CreatePageCommand {
     }
 
     public generatePage(name: string): string {
-        return this.$generatorService.generate(
+        return this.$generatorServiceJS.generate(
             name,
             "page",
             DefaultSrcPath.NATIVESCRIPT
@@ -60,6 +60,6 @@ class CreatePageCommand {
 }
 
 $injector.registerCommand(
-    ["create|page", "c|page", "create|p", "c|p"],
-    CreatePageCommand
+    ["make|page", "m|page", "make|p", "m|p"],
+    MakePageCommand
 );

@@ -1,7 +1,7 @@
 import * as stringUtils from "./cli-string-utils";
 import * as path from "path";
 
-export class ValidationService {
+export class ValidationServiceJS {
     constructor(
         private $projectDataService: IProjectDataService,
         private $fs: IFileSystem
@@ -24,4 +24,4 @@ export class ValidationService {
     }
 }
 
-$injector.register("validationService", ValidationService);
+$injector.register("validationServiceJS", ValidationServiceJS);

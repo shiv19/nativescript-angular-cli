@@ -1,4 +1,4 @@
-class CreateListCommand {
+class MakeListCommand {
     constructor(private $logger: ILogger) {}
 
     canExecute(args: string[]) {
@@ -10,7 +10,7 @@ class CreateListCommand {
     execute(args: string[]) {
         return new Promise((resolve, reject) => {
             let message = `List of all available commands:
-\`tns g p <name>\` => tns create page <name>`;
+\`tns m p <name>\` => tns make page <name>`;
 
             this.$logger.printMarkdown(message);
 
@@ -20,6 +20,6 @@ class CreateListCommand {
 }
 
 $injector.registerCommand(
-    ["create|*default", "c|*default", "create|list", "c|list"],
-    CreateListCommand
+    ["make|*default", "m|*default", "make|list", "m|list"],
+    MakeListCommand
 );

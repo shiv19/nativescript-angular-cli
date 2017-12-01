@@ -1,9 +1,9 @@
 ```
-tns create page <pagename>
+tns make page <pagename>
 
-tns create p <pagename>
+tns make p <pagename>
 
-tns c page <pagename>
+tns m page <pagename>
 
-tns c p <pagename>
+tns m p <pagename>
 ```
