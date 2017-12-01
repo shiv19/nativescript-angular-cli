@@ -32,6 +32,8 @@ To generate page run:
 
 Made with love for {N} Community
 
-Big thanks to Sebastian Witalec
+Big thanks to
+
 [![Twitter URL](https://img.shields.io/badge/twitter-%40Sebawita-blue.svg)](https://twitter.com/sebawita)
-for making the nativescript-angular-cli
+for making the
+![nativescript-angular-cli](https://github.com/sebawita/nativescript-angular-cli)
