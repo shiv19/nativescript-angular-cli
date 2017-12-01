@@ -22,6 +22,17 @@ export class ValidationServiceJS {
         const fullUrl = path.join(srcPath, name);
         return this.$fs.exists(fullUrl);
     }
+
+    public checkIfPageExistsInFolder(
+        srcPath: string,
+        name: string,
+        folderName: string
+    ) {
+        name = name.toLowerCase();
+
+        const fullUrl = path.join(srcPath, folderName, name);
+        return this.$fs.exists(fullUrl);
+    }
 }
 
 $injector.register("validationServiceJS", ValidationServiceJS);

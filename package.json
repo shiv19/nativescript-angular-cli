@@ -1,6 +1,6 @@
 {
     "name": "nativescript-javascript-cli",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description":
         "NativeScript CLI command extensions to add some of the NS Core with JS commands",
     "main": "lib/bootstrap.js",
